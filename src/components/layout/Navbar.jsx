@@ -2,7 +2,7 @@ import Logo from "../../assets/logo.svg"; // use your logo
 
 export default function Navbar() {
   return (
-    <nav className="w-full py-4 px-6 mt-1.5 flex items-center justify-between">
+    <nav className="w-full py-4 px-4 lg:px-10 mt-1.5 flex items-center justify-between">
       {/* Left - Logo */}
       <div className="flex items-center">
         <img src={Logo} alt="logo" className="h-19 w-auto" />
