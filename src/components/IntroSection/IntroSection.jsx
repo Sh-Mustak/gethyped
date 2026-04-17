@@ -4,7 +4,7 @@ export default function IntroSection() {
       <div className="px-4 lg:px-10">
         <div className=" md:max-w-[1500px] mx-auto">
           {/* Heading */}
-          <div className="mt-28 mb-16 sm:mt-32 sm:mb-20 lg:mt-40 lg:mb-24">
+          <div className=" mb-16 sm:mt-32 sm:mb-20 lg:mt-40 lg:mb-24">
             <h2
               className="
                 font-bold leading-[1.1]
