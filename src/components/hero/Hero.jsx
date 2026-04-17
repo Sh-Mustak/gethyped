@@ -8,8 +8,8 @@ export default function Hero() {
           className="
           font-semibold text-black 
           leading-[0.95] tracking-tighter
-          text-[clamp(2.9rem,7vw,8rem)]
-          max-w-[14ch] md:max-w-[15ch]
+          text-[clamp(3.35rem,7vw,8rem)]
+          max-w-[12ch] md:max-w-[15ch]
         "
         >
           Get Hyped. Get Noticed. Get Results.
