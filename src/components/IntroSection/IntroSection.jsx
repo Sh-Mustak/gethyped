@@ -2,7 +2,7 @@ import VideoCard from "../hero/VideoCard";
 
 export default function IntroSection() {
   return (
-    <section id="intro-home" className="w-full mb-100">
+    <section id="intro-home" className="w-full mb-50">
       <div className="px-4 lg:px-10">
         <div className="md:max-w-[1500px] mx-auto">
           {/* Heading */}
@@ -66,7 +66,7 @@ export default function IntroSection() {
           {/* Col 2: Text + Button */}
           <div className="flex flex-col items-start xs:px-3 sm:px-4 md:px-5 lg:px-6">
             <p className="
-              font-semibold leading-[1.2] tracking-tight max-w-[29ch]
+              font-semibold leading-[1.2] tracking-tight md:max-w-[29ch]
               xs:text-[15px] xs:mb-3 xs:max-w-[23ch]
               sm:text-[18px] sm:mb-4
               md:text-[24px] md:mb-5

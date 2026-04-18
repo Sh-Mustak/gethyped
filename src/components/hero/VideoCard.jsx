@@ -9,7 +9,7 @@
  */
 export default function VideoCard({ videoSrc, overlay = true }) {
   return (
-    <div className="relative w-full h-full bg-black">
+    <div className="relative w-full h-full bg-black ">
       <video
         src={videoSrc}
         autoPlay
