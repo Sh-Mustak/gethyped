@@ -103,7 +103,7 @@ function CardFace({ card }) {
 
         {/* title */}
         <h2
-          className="text-[42px] font-black leading-[1.5] tracking-tight"
+          className="text-[38px] font-black leading-[1.5] tracking-tighter"
           style={{ color: card.textColor }}
         >
           {card.title}
@@ -112,7 +112,7 @@ function CardFace({ card }) {
         {/* video — grows to fill space */}
         <div className="flex-1 -rotate-2 min-h-0">
           <div
-            className={`w-[200px] h-[290px] ${
+            className={`w-[150px] h-[200px] ${
               card.id === "01" ? "bg-[#ff3000]" : "bg-[#ffffff]"
             } p-1.5 rounded-[20px]`}
           >
@@ -125,13 +125,13 @@ function CardFace({ card }) {
         {/* subtitle + desc + button */}
         <div className="flex flex-col gap-3">
           <h3
-            className="text-[26px] font-bold leading-snug tracking-tight"
+            className="text-[20px] font-bold leading-snug tracking-tight"
             style={{ color: card.textColor }}
           >
             {card.subtitle}
           </h3>
           <p
-            className="text-[20px] max-w-[30.5ch] font-medium leading-snug tracking-tight"
+            className="text-[18px] max-w-[30.5ch] font-medium leading-snug tracking-tight"
             style={{ color: card.textColor }}
           >
             {card.desc}
