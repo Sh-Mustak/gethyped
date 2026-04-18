@@ -84,7 +84,7 @@ function CardFace({ card }) {
       style={{ background: card.bg }}
     >
       {/* ── MOBILE (<480px): single column stack, full height ── */}
-      <div className="flex xs:hidden flex-col px-6 pt-6 pb-8 gap-5 min-h-[calc(100vh-7rem)]">
+      <div className="flex xs:hidden flex-col px-6 pt-6 pb-8 gap-5 min-h-[calc(100vh-10rem)]">
         {/* top row: chip + number */}
         <div className="flex items-start justify-between">
           <span
@@ -341,7 +341,7 @@ export default function ExpertiseSection() {
           return (
             <div
               key={card.id}
-              className="absolute inset-0 px-3  xs:px-6 lg:px-10 py-12 xs:py-8 lg:py-16"
+              className="absolute inset-0 px-3  xs:px-6 lg:px-10 py-8 xs:py-8 lg:py-16"
               style={{
                 transform: `translateY(${combinedTranslateY}) scale(${outgoingScale})`,
                 opacity: combinedOpacity,
