@@ -84,23 +84,24 @@ function CardFace({ card }) {
     >
       {/* LEFT SIDE */}
       <div className="flex flex-col justify-between h-full">
-        {/* chip */}
-        <span
-          className="inline-block text-2xl font-medium px-3 py-2 rounded-[10px] tracking-tight leading-none w-fit"
-          style={{ background: card.chipBg, color: card.chipText }}
-        >
-          {card.label}
-        </span>
-
-        {/* title + content */}
-        <div className="flex flex-col gap-6 mt-10">
+        {/* chip +  title */}
+        <div className="flex flex-col gap-6">
+          <span
+            className="inline-block text-2xl font-medium px-3 py-3 rounded-[8px] tracking-tight leading-none w-fit"
+            style={{ background: card.chipBg, color: card.chipText }}
+          >
+            {card.label}
+          </span>
           <h2
             className="text-[clamp(40px,5.5vw,100px)] font-black leading-[0.95] tracking-tight"
             style={{ color: card.textColor }}
           >
             {card.title}
           </h2>
+        </div>
 
+        {/* content */}
+        <div className="flex flex-col gap-6 mt-10">
           <div className="flex flex-col gap-3 max-w-[55ch]">
             <h3
               className="text-lg font-bold leading-tight"
