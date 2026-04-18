@@ -20,6 +20,7 @@ const CARDS = [
     btnText: "#ffffff",
     mediaBorder: "#ff3d00",
     mediaGrad: "linear-gradient(135deg,#d4c4ac 0%,#9e7c58 100%)",
+    videoSrc: "https://gethyped.b-cdn.net/MD/MD%20Loop%20Schaken.mp4",
   },
   {
     id: "02",
@@ -38,6 +39,7 @@ const CARDS = [
     btnText: "#1a1a1a",
     mediaBorder: "rgba(255,255,255,0.5)",
     mediaGrad: "linear-gradient(135deg,#a855f7 0%,#3b0764 100%)",
+    videoSrc: "https://gethyped.b-cdn.net/Expertises/Loop%20BTS%20comp.mp4",
   },
   {
     id: "03",
@@ -56,6 +58,7 @@ const CARDS = [
     btnText: "#1a1a1a",
     mediaBorder: "rgba(255,255,255,0.45)",
     mediaGrad: "linear-gradient(135deg,#5fffd8 0%,#007a55 100%)",
+    videoSrc: "https://gethyped.b-cdn.net/Over%20de%20Top/overdetop-loop.mp4",
   },
   {
     id: "04",
@@ -74,6 +77,7 @@ const CARDS = [
     btnText: "#1a1a1a",
     mediaBorder: "rgba(255,255,255,0.30)",
     mediaGrad: "linear-gradient(135deg,#6ea8ff 0%,#002eaa 100%)",
+    videoSrc: "https://gethyped.b-cdn.net/Expertises/Data%20comp.mp4",
   },
 ];
 
@@ -155,7 +159,7 @@ function CardFace({ card }) {
             } p-2 rounded-[30px]`}
           >
             <div className="w-full h-full rounded-[18px] overflow-hidden">
-              <VideoCard videoSrc="https://gethyped.b-cdn.net/New%20Reach/new-reach-loop.mp4" />
+              <VideoCard videoSrc={card.videoSrc} />
             </div>
           </div>
         </div>
