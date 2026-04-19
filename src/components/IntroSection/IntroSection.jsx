@@ -84,7 +84,7 @@ export default function IntroSection() {
               content zonder strategie. Nooit meer content zonder resultaat.
             </p>
 
-           <Button text="Leer ons kennen"/>
+            <Button text="Leer ons kennen" />
           </div>
 
           {/* Col 3: Arrow Button */}

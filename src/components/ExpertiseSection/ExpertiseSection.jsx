@@ -356,6 +356,7 @@ export default function ExpertiseSection() {
           );
         })}
       </div>
+      
     </section>
   );
 }

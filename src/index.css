@@ -3,3 +3,28 @@
 @theme {
   --breakpoint-xs: 480px;
 }
+@keyframes arrowLoop {
+  0% {
+    transform: rotate(220deg) translate(0, 0);
+    opacity: 1;
+  }
+
+  45% {
+    transform: rotate(220deg) translate(180%, -180%);
+    opacity: 0;
+  }
+
+  46% {
+    transform: rotate(220deg) translate(-180%, 180%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(220deg) translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.arrow-loop {
+  animation: arrowLoop 0.65s ease-in-out infinite;
+}
