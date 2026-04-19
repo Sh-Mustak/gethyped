@@ -112,7 +112,7 @@ export default function SelectedWorksCards() {
                 : "-rotate-2 xs:rotate-0",
 
             // mobile: full width, fixed height
-            "w-full h-[480px]",
+            "w-full h-[420px]",
             // xs+: fixed card sizes
             "xs:w-[32%] xs:h-[340px]",
             "sm:h-[220px]",
