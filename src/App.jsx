@@ -1,4 +1,5 @@
 import "./App.css";
+import ClientsMarquee from "./components/clients/Clientsmarquee";
 import ExpertiseSection from "./components/ExpertiseSection/ExpertiseSection";
 import Hero from "./components/hero/Hero";
 import IntroSection from "./components/IntroSection/IntroSection";
@@ -13,6 +14,7 @@ function App() {
       <IntroSection />
       <ExpertiseSection />
       <SelectedWork />
+      <ClientsMarquee />
     </>
   );
 }
