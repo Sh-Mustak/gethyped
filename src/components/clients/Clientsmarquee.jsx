@@ -97,16 +97,15 @@ export default function ClientsMarquee() {
   };
 
   return (
-    <section className="py-16 xs:py-20 lg:py-32 overflow-hidden">
+    <section className="py-16  xs:py-20 lg:py-32 overflow-hidden">
       <div className="px-4 lg:px-10 mb-10 xs:mb-14 lg:mb-20">
-        <div className="max-w-[1512px] mx-auto">
+        <div className="">
           <h2
-            className="font-black leading-[1.05] tracking-tight text-neutral-900
-            text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+            className="font-black leading-[1.05] tracking-tight text-neutral-900 font-semibold
+            text-[40px] xs:text-[40px] sm:text-[50px] md:text-[60px] lg:text-[80px] max-w-[10ch]
+            xs:max-w-[12ch] sm:max-w-[30ch] md:max-w-[20ch] lg:max-w-[12ch]"
           >
-            These brands
-            <br />
-            got hyped.
+            These brands got hyped.
           </h2>
         </div>
       </div>
@@ -133,12 +132,12 @@ export default function ClientsMarquee() {
               key={i}
               className="
                 flex items-center justify-center shrink-0
-                bg-white border border-neutral-200 rounded-2xl xs:rounded-3xl
-                w-[160px] h-[100px]
-                xs:w-[220px] xs:h-[130px]
-                sm:w-[260px] sm:h-[150px]
-                md:w-[300px] md:h-[170px]
-                lg:w-[340px] lg:h-[200px]
+                border border-[#bab7b0] rounded-2xl xs:rounded-xl
+                w-[120px] h-[120px]
+                xs:w-[180px] xs:h-[180px]
+                sm:w-[260px] sm:h-[560px]
+                md:w-[320px] md:h-[320px]
+                lg:w-[370px] lg:h-[370px]
                 px-6 xs:px-8 lg:px-10
               "
             >
@@ -146,7 +145,7 @@ export default function ClientsMarquee() {
                 src={src}
                 alt=""
                 draggable="false"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
@@ -155,7 +154,7 @@ export default function ClientsMarquee() {
 
       {/* divider */}
       <div className="px-4 lg:px-10 mt-16 xs:mt-20 lg:mt-28">
-        <div className="max-w-[1512px] mx-auto border-t border-neutral-200" />
+        <div className=" border-t border-[#bab7b0] " />
       </div>
     </section>
   );
