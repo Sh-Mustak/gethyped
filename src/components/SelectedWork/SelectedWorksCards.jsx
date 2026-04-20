@@ -115,7 +115,7 @@ export default function SelectedWorksCards() {
             // xs+: fixed card sizes
             "xs:w-[32%] xs:h-[240px]",
             "sm:h-[320px]",
-            "md:w-[320px] md:h-[420px]",
+            "md:w-[32%] md:h-[380px]",
             "lg:w-[480px] lg:h-[600px]",
             // bg colors
             i === 0 ? "bg-[#ff3000]" : "",

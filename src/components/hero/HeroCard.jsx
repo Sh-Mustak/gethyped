@@ -54,7 +54,7 @@ export default function HeroCard() {
         className="
           relative w-full
           mt-8 md:mt-20
-          h-[320px] sm:h-[450px] md:h-[600px]
+          h-[320px] sm:h-[450px] md:h-[600px] lg:h-[620px]
           flex items-center justify-center
         "
       >

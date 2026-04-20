@@ -214,9 +214,7 @@ export default function Footer() {
             <h2 className="font-black leading-[1.0] text-center tracking-tight text-neutral-900 text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-[clamp(80px,8vw,120px)]">
               Let's Get Hyped!
             </h2>
-            <div className="hidden xs:block">
-              <SpinningSticker />
-            </div>
+           
           </div>
           <div className="flex flex-col justify-center items-center xs:flex-row gap-3 xs:gap-4 mt-8 xs:mt-10">
             <Button text="Mail ons direct" />
