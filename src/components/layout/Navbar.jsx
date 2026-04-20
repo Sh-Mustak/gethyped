@@ -1,42 +1,135 @@
-import Logo from "../../assets/logo.svg"; // use your logo
+import { useEffect, useState } from "react";
+import Logo from "../../assets/logo.svg";
+import GetResultsBtn from "../UI/GetResultsBtn";
+
+const menuItems = ["Expertises", "Work", "About", "Contact"];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Scroll lock when overlay is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
-    <nav className="w-full py-4 px-4 lg:px-10 mt-1.5 flex items-center justify-between">
-      {/* Left - Logo */}
-      <div className="flex items-center">
-        <img src={Logo} alt="logo" className="h-19 w-auto" />
-      </div>
+    <>
+      <style>{`
+        @keyframes bouncyDrop {
+          0%   { transform: translateY(-100%); opacity: 0; }
+          55%  { transform: translateY(12px);  opacity: 1; }
+          70%  { transform: translateY(-8px); }
+          82%  { transform: translateY(5px); }
+          91%  { transform: translateY(-3px); }
+          100% { transform: translateY(0px); opacity: 1; }
+        }
 
-      {/* Center - Menu */}
-      <div className="flex justify-center flex-1">
-        <div className="hidden md:flex items-center justify-center bg-white rounded-[15px] px-6 h-14 min-w-[390px] gap-9 text-[18px] font-medium">
-          <a href="#">Expertises</a>
-          <a href="#">Work</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+        .overlay-bounce {
+          animation: bouncyDrop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes itemFadeUp {
+          0%   { transform: translateY(20px); opacity: 0; }
+          100% { transform: translateY(0);    opacity: 1; }
+        }
+
+        .menu-item-animate {
+          animation: itemFadeUp 0.35s ease forwards;
+          opacity: 0;
+        }
+      `}</style>
+
+      {/* ─── Main Navbar ─── */}
+      <nav
+        className="w-full py-4 px-4 lg:px-10 mt-1.5 flex items-center justify-between relative z-50"
+        style={{
+          backgroundColor: isOpen ? "transparent" : "",
+          transition: "background-color 0.3s ease",
+        }}
+      >
+        {/* Logo */}
+        <div className="flex items-center">
+          <img
+            src={Logo}
+            alt="logo"
+            className="h-13 sm:h-14 md:h-16 lg:h-19 w-auto"
+          />
         </div>
-      </div>
 
-      {/* Right - Button */}
-      <div>
-        <button className="flex justify-between gap-x-3 items-center w-full text-[18px] bg-[#ff9bf7ad] hover:bg-[#ff9bf7] text-black font-semibold pl-[.6rem] pr-[.3rem] py-[.3rem] rounded-[14px] transition duration-300">
-          <span className="">Get Results</span>
+        {/* Desktop Menu */}
+        <div className="flex justify-center flex-1">
+          <div className="hidden md:flex items-center justify-center bg-white rounded-[15px] px-6 h-14 min-w-[390px] gap-9 text-[18px] font-medium">
+            {menuItems.map((item) => (
+              <a key={item} href="#">
+                {item}
+              </a>
+            ))}
+          </div>
+        </div>
 
-          <span className="bg-white rounded-[12px] p-2.5 h-11 flex items-center justify-center text-orange-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 24"
-              className="w-6 h-6"
+        {/* Desktop Button + Mobile Hamburger/Close */}
+        <div className="flex items-center gap-3">
+          <div className="hidden md:block">
+            <GetResultsBtn bgColor="#ff9bf7ad" />
+          </div>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden flex items-center justify-center w-12 h-12 rounded-xl text-2xl transition-all duration-300"
+            style={{
+              backgroundColor: isOpen ? "#fffff" : "#ff9bf7",
+              color: isOpen ? "#000" : "#fff",
+            }}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? "✕" : "☰"}
+          </button>
+        </div>
+      </nav>
+
+      {/* ─── Mobile Overlay (starts below navbar with margin/padding gap) ─── */}
+      {isOpen && (
+        <div
+          key={isOpen}
+          className="overlay-bounce fixed left-0 right-0 bottom-0 z-40 flex flex-col items-center justify-center gap-6 md:hidden rounded-2xl"
+          style={{
+            backgroundColor: "#ff9bf7",
+            top: "0",
+            maxWidth: "96dvw",
+            maxHeight: "96dvh",
+            margin: "auto",
+          }}
+        >
+          {menuItems.map((item, index) => (
+            <a
+              key={item}
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="menu-item-animate bg-white text-black text-2xl font-semibold rounded-2xl px-16 py-4 text-center"
+              style={{
+                animationDelay: `${0.15 + index * 0.07}s`,
+                minWidth: "220px",
+              }}
             >
-              <path
-                d="M17.4906 11.0361C17.1898 10.6437 16.8237 10.3037 16.4837 9.96371C15.6075 9.17906 14.6136 8.61673 13.7766 7.79284C11.8281 5.88352 11.3965 2.73184 12.6389 0.3125C11.3965 0.613283 10.3111 1.29331 9.38256 2.03873C5.99549 4.75886 4.66158 9.55831 6.25704 13.6777C6.30935 13.8085 6.36166 13.9393 6.36166 14.1093C6.36166 14.397 6.16549 14.6585 5.90394 14.7632C5.60316 14.8939 5.2893 14.8155 5.04083 14.6062C4.96661 14.5441 4.90453 14.4687 4.85774 14.3839C3.37998 12.5138 3.14459 9.83294 4.13848 7.68822C1.95453 9.46676 0.764478 12.4746 0.934486 15.3124C1.01295 15.9663 1.09142 16.6202 1.31373 17.274C1.49682 18.0587 1.84991 18.8433 2.24224 19.5365C3.65461 21.7989 6.10011 23.4205 8.72869 23.7474C11.5273 24.1005 14.522 23.5905 16.6667 21.655C19.0599 19.4841 19.8969 16.0055 18.6676 13.0238L18.4976 12.6838C18.223 12.0823 17.4906 11.0361 17.4906 11.0361ZM13.3581 19.2749C12.992 19.5888 12.3904 19.9288 11.9196 20.0596C10.4549 20.5827 8.99024 19.8503 8.12712 18.9872C9.68335 18.621 10.6118 17.4702 10.8865 16.3063C11.1088 15.2601 10.6903 14.397 10.5203 13.39C10.3634 12.4223 10.3895 11.5984 10.7426 10.6961C10.9911 11.193 11.2526 11.6899 11.5665 12.0823C12.5735 13.39 14.1559 13.9654 14.4959 15.744C14.5482 15.9271 14.5743 16.1101 14.5743 16.3063C14.6136 17.3787 14.1428 18.5556 13.3581 19.2749Z"
-                fill="currentColor"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-    </nav>
+              {item}
+            </a>
+          ))}
+
+          <div
+            className="menu-item-animate"
+            style={{ animationDelay: `${0.15 + menuItems.length * 0.07}s` }}
+          >
+            <GetResultsBtn bgColor="#000" />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
