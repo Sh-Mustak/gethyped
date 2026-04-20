@@ -135,7 +135,7 @@ export default function ClientsMarquee() {
                 border border-[#bab7b0] rounded-2xl xs:rounded-xl
                 w-[120px] h-[120px]
                 xs:w-[180px] xs:h-[180px]
-                sm:w-[260px] sm:h-[560px]
+                sm:w-[260px] sm:h-[260px]
                 md:w-[320px] md:h-[320px]
                 lg:w-[370px] lg:h-[370px]
                 px-6 xs:px-8 lg:px-10
