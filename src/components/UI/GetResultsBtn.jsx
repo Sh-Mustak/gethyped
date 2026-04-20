@@ -1,7 +1,10 @@
-export default function GetResultsBtn({bgColor}) {
+export default function GetResultsBtn({ bgColor, textColor }) {
   return (
     <div>
-      <button className={`flex justify-between gap-x-3 items-center w-full text-[18px] bg-[${bgColor}] hover:bg-[${bgColor.replace('ad', '')}] ${bgColor === '#ff3000' ? 'text-white' : 'text-black'} font-semibold pl-[.6rem] pr-[.3rem] py-[.3rem] rounded-[14px] transition duration-300`}>
+      <button
+        className={`flex justify-between gap-x-3 items-center w-full text-[18px] font-semibold pl-[.6rem] pr-[.3rem] py-[.3rem] rounded-[14px] transition duration-300`}
+        style={{ backgroundColor: bgColor, color: textColor }}
+      >
         <span className="">Get Results</span>
 
         <span className="bg-white rounded-[12px] p-2.5 h-11 flex items-center justify-center text-orange-500">

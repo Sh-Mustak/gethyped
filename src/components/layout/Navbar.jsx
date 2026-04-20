@@ -77,7 +77,7 @@ export default function Navbar() {
         {/* Desktop Button + Mobile Hamburger/Close */}
         <div className="flex items-center gap-3">
           <div className="hidden md:block">
-            <GetResultsBtn bgColor="#ff9bf7ad" />
+            <GetResultsBtn bgColor="#ff9bf7" textColor="#000" />
           </div>
 
           <button
@@ -126,7 +126,7 @@ export default function Navbar() {
             className="menu-item-animate"
             style={{ animationDelay: `${0.15 + menuItems.length * 0.07}s` }}
           >
-            <GetResultsBtn bgColor="#000" />
+            <GetResultsBtn bgColor="#000000" textColor="#ffffff" />
           </div>
         </div>
       )}

@@ -220,7 +220,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col justify-center items-center xs:flex-row gap-3 xs:gap-4 mt-8 xs:mt-10">
             <Button text="Mail ons direct" />
-            <GetResultsBtn bgColor="#ff3000" />
+            <GetResultsBtn bgColor="#ff3000" textColor="#ffffff" />
           </div>
         </div>
       </div>
