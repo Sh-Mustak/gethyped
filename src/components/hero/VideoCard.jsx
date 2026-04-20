@@ -20,13 +20,13 @@ export default function VideoCard({
       />
 
       {/* BOTTOM: Vector1 + text inside it + arrow button */}
-      <div className="absolute bottom-0 left-0 right-4 z-10 w-full h-[50%] xs:h-[60%] sm:h-[55%] md:h-[55%] lg:h-[40%] px-1 xs:px-1.5 sm:px-1.5 md:px-3 pb-1 sm:pb-1.5 md:pb-3">
+      <div className="absolute bottom-0 left-0 right-4 z-10 w-full h-[40%] xs:h-[65%] sm:h-[55%] md:h-[55%] lg:h-[42%] px-1 xs:px-1.5 sm:px-1.5 md:px-3 pb-1 sm:pb-1.5 md:pb-3">
         {/* Vector1 SVG */}
         <Vector1 overlayBg={overlayBg} />
 
         {/* TEXT — sits inside the Vector1 shape */}
-        <div className="absolute inset-0 flex flex-col justify-end px-3 pb-3 xs:px-4 xs:pb-3.5 sm:px-5 sm:pb-4 md:px-6 md:pb-8 max-w-[80%] xs:max-w-[75%] md:max-w-[70%]">
-          <p className="text-[30px] xs:text-sm sm:text-base md:text-lg lg:text-3xl font-medium mb-1 leading-snug text-white">
+        <div className="absolute inset-0 flex flex-col justify-end px-3 pb-3 xs:px-4 xs:pb-3.5 sm:px-5 sm:pb-4 md:px-6 md:pb-8 max-w-[80%] xs:max-w-[100%] md:max-w-[70%]">
+          <p className="text-[24px] xs:text-[16px] sm:text-base md:text-lg lg:text-3xl font-medium mb-1 leading-snug text-white">
             {title}
           </p>
           <p

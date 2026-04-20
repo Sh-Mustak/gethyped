@@ -114,8 +114,8 @@ export default function SelectedWorksCards() {
             // mobile: full width, fixed height
             "w-full h-[420px]",
             // xs+: fixed card sizes
-            "xs:w-[32%] xs:h-[340px]",
-            "sm:h-[220px]",
+            "xs:w-[32%] xs:h-[240px]",
+            "sm:h-[320px]",
             "md:w-[320px] md:h-[420px]",
             "lg:w-[480px] lg:h-[600px]",
             // bg colors
