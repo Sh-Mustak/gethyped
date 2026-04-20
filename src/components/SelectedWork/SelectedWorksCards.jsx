@@ -86,21 +86,20 @@ export default function SelectedWorksCards() {
     <div
       ref={wrapperRef}
       className="
-        flex flex-col xs:flex-row
-        gap-2 xs:gap-2 sm:gap-2 md:gap-3 lg:gap-8
-        max-w-[1600px] justify-between mx-auto
-        
-        pt-4 pb-8
-        px-4 xs:px-0
-      "
+    flex flex-col xs:flex-row
+    gap-1 sm:gap-2 md:gap-3 lg:gap-8
+    max-w-[1600px] justify-between mx-auto
+    pt-4 pb-8
+    px-4 xs:px-0
+  "
     >
       {WORKS.map((work, i) => (
         <div
           key={i}
           ref={(el) => (cardRefs.current[i] = el)}
           className={[
-            "rounded-[20px] xs:rounded-[24px] sm:rounded-[28px] lg:rounded-[30px]",
-            "shrink-0 p-1.5 xs:p-2",
+            "rounded-[16px] xs:rounded-[22px] sm:rounded-[22px] lg:rounded-[30px]",
+            "shrink-0 p-1 xs:p-1 sm:p-1 md:p-1 lg:p-2",
             "mb-4 xs:mb-0",
             "hover:-rotate-2 hover:scale-105 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]",
             // mobile: card Rotation

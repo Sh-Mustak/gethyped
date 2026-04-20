@@ -20,7 +20,7 @@ export default function VideoCard({
       />
 
       {/* BOTTOM: Vector1 + text inside it + arrow button */}
-      <div className="absolute bottom-0 left-0 right-4 z-10 w-full h-[40%] xs:h-[65%] sm:h-[55%] md:h-[55%] lg:h-[42%] px-1 xs:px-1.5 sm:px-1.5 md:px-3 pb-1 sm:pb-1.5 md:pb-3">
+      <div className="absolute bottom-0 left-0 right-4 z-10 w-full h-[45%] xs:h-[65%] sm:h-[55%] md:h-[55%] lg:h-[42%] px-1 xs:px-1.5 sm:px-1.5 md:px-3 pb-1 sm:pb-1.5 md:pb-3">
         {/* Vector1 SVG */}
         <Vector1 overlayBg={overlayBg} />
 
@@ -39,7 +39,7 @@ export default function VideoCard({
 
         {/* ARROW BUTTON — top right inside Vector1 */}
         {overlayBg && (
-          <div className="absolute top-[3%] right-[5%] xs:top-[3%] xs:right-[5%] sm:top-[2.5%] sm:right-[5%] md:top-[5%] md:right-[6.5%]">
+          <div className="absolute top-[4%] right-[4.5%] xs:top-[3%] xs:right-[5%] sm:top-[2.5%] sm:right-[5%] md:top-[3%] md:right-[6.5%]">
             <button className="w-10 h-10 xs:w-7 xs:h-7 sm:w-8 sm:h-8 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center shadow-lg overflow-hidden">
               <div className="relative w-3 h-3 xs:w-3 xs:h-3 sm:w-4 sm:h-4 lg:w-6 lg:h-6">
                 <img
